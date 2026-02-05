@@ -12,7 +12,7 @@ public class external_rye_work {
      // numberOfItems = 4
 
      // you created array with a size of what the user has inputted.
-     // ✅ this is correct!
+     // ✅✅✅ this is correct!
         double [] itemPrices = new double[numberOfItems]; // this uses the value from numberOfItems, which is 4.
      // double [] itemPrices  = new double[4]
      // double [] itemPrices = {0, 0, 0, 0}, the itemPrices[] would look like this.
@@ -21,7 +21,7 @@ public class external_rye_work {
         double totalAmounts = 0; // the sum of all prices inside itemPrices[]
         double discounted = 0; // the sum of all prices inside itemPrices[] but with discount included
         double mostExpensive = 0; // identify the most expensive item inside itemPrices[]
-        double leastExpensive = 0; // identify the lease expensive item inside itemPrices[]
+        double leastExpensive = 0; // identify the least expensive item inside itemPrices[]
 
 
         // you used a for loop, which iterates four times. from 0, 1, 2, 3
@@ -117,7 +117,7 @@ public class external_rye_work {
 
             //              >>> the for loop can no longer run because it fails the condition (i > numberOfItems) being (4 > 4), which is FALSE.
             //              >>> ✅ the itemPrices[] array is complete.
-            //              >>> ✅ itemPrices[] = {99, 299, 599, 1499}
+            //              >>> ✅ itemPrices[] = {99, 299, 599, 2599}
             //              >>> ✅ your itemPrices[] array is ready to be processed by the methods you've made.
         }
 
@@ -137,7 +137,7 @@ public class external_rye_work {
         System.out.print("\nMost expensive item: " + mostExpensive);
         System.out.print("\nLeast expensive item: " + leastExpensive);
 
-        // ✅ good programming practice
+        // ✅✅✅ good programming practice
         scanner.close();
 
     }
@@ -145,7 +145,7 @@ public class external_rye_work {
     // from what i am understanding, these methods asks for itemPrices[] array, and returns a double value.
     // this should only run after the for loop is done, meaning our itemPrices[] has complete values.
 
-    // ✅ so putting `discounted = discountedItem(itemPrices);` (and the other methods) AFTER the for loop is a great intuition.
+    // ✅✅✅ so putting `discounted = discountedItem(itemPrices);` (and the other methods) AFTER the for loop is a great intuition.
 
     // lets assume that the my itemPrices[] is now...
     // itemPrices[] = {99, 299, 599, 2599}
@@ -174,15 +174,15 @@ public class external_rye_work {
             //      - if not, no subtraction happens and the item price is stored to the accumulator variable.
             if (itemPrice > discountedPrice) {
                 discount += itemPrice - (itemPrice * percentageDiscount);
-                // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+                // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
                 // ⭐ shortcut trick in case you want...                     ⭐
                 // ⭐ discount += (itemPrice * 0.9)                          ⭐
                 // ⭐                                                        ⭐
                 // ⭐ no need for a percentageDiscount variable on this one  ⭐
-                // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+                // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
             }
             else{
-                // ✅ else block only triggers if prices are 99 below
+                // ✅✅✅ else block only triggers if prices are 99 below
                 // they do not need discount, so the original item price gets added to the discount accumulator directly.
                 discount += itemPrice;
             }
@@ -228,7 +228,7 @@ public class external_rye_work {
     // we get the total NOT DISCOUNTED price.
     static double totalAmount(double [] itemPrices){
         // this is your accumulator variable, it adds all the values inside the itemPrices[] with discount.
-        // ✅ setting your accumulator variable to zero by default is good idea.
+        // ✅✅✅ setting your accumulator variable to zero by default is good idea.
         double sum = 0;
 
         // you used an enhanced for loop, this is similar to
@@ -269,7 +269,7 @@ public class external_rye_work {
     // but how would the code now?, by comparing.
 
     static double expensiveItem(double []itemPrices){
-        // ✅ this is correct, and great work for not confusing this to highest = 0;
+        // ✅✅✅ this is correct, and great work for not confusing this to highest = 0;
         double highest = itemPrices[0];
         // wait, why not highest = 0?
         // although the code may result just as fine, this would cause problems if you're finding the LEAST EXPENSIVE item.
@@ -326,7 +326,7 @@ public class external_rye_work {
     }
 
     static double leastExpensiveItem(double []itemPrices){
-        // ✅✅✅✅✅✅✅✅✅✅✅ GREAT WORK for doing this! ! ! ! ! ! ! !
+        // ✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅ GREAT WORK for doing this! ! ! ! ! ! ! !
         // you avoided yourself to get stuck on a problem wondering why leastExpensiveItem method always returns 0.
         double lowest = itemPrices[0];
         // a lot of people usually get stuck in this part, they get the expensive correctly, but not the least.
